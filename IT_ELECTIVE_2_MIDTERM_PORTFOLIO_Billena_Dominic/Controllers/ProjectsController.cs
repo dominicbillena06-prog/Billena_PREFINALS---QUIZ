@@ -14,7 +14,7 @@ namespace IT_ELECTIVE_2_MIDTERM_PORTFOLIO_Billena_Dominic.Controllers
                 Id = 1,
                 Title = "C# FizzBuzz Challenge",
                 Category = "Prelim A1",
-                Description = "A beginner C# console application implementing the classic FizzBuzz programming challenge using loops and conditional statements.",
+                Description = "A C# console application implementing the classic FizzBuzz programming challenge using loops, conditional statements, and user input.",
                 Technologies = "C#, .NET, Visual Studio, GitHub Desktop",
                 ImageUrl = "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80",
                 GithubUrl = "https://github.com/dominicbillena06-prog/BSIT31EE1_PRELIM_A1_Billena_Dominic"
@@ -25,7 +25,7 @@ namespace IT_ELECTIVE_2_MIDTERM_PORTFOLIO_Billena_Dominic.Controllers
                 Id = 2,
                 Title = "C# Calculator Challenge",
                 Category = "Prelim A2",
-                Description = "A C# calculator application demonstrating user input, arithmetic operations, validation, and Git-based development.",
+                Description = "A C# calculator application demonstrating arithmetic operations, user input, validation, and basic programming logic.",
                 Technologies = "C#, .NET, Visual Studio, GitHub Desktop",
                 ImageUrl = "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=1200&q=80",
                 GithubUrl = "https://github.com/dominicbillena06-prog/BSIT31E-x-_PRELIM_A2_Billena_Dominic"
@@ -36,8 +36,8 @@ namespace IT_ELECTIVE_2_MIDTERM_PORTFOLIO_Billena_Dominic.Controllers
                 Id = 3,
                 Title = "File Ingestion Engine",
                 Category = "Prelim H2",
-                Description = "A C# file ingestion system designed to process multiple file formats through separate reader implementations and a resolver.",
-                Technologies = "C#, Interfaces, Strategy Pattern, File Processing",
+                Description = "A C# file ingestion application designed to process different file types through separate reader implementations and a resolver-based architecture.",
+                Technologies = "C#, Interfaces, File Processing, Strategy Pattern",
                 ImageUrl = "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
                 GithubUrl = "https://github.com/dominicbillena06-prog/BSIT31E3_PRELIM_H2_billena_dominic"
             },
@@ -47,7 +47,7 @@ namespace IT_ELECTIVE_2_MIDTERM_PORTFOLIO_Billena_Dominic.Controllers
                 Id = 4,
                 Title = "Personal Portfolio Website",
                 Category = "Midterm Activity 1",
-                Description = "A responsive personal portfolio created using ASP.NET Core MVC, Razor Views, and Bootstrap 5.",
+                Description = "A responsive personal portfolio website created using ASP.NET Core MVC, Razor Views, and Bootstrap 5.",
                 Technologies = "ASP.NET Core MVC, C#, Razor, Bootstrap 5",
                 ImageUrl = "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80",
                 GithubUrl = "https://github.com/dominicbillena06-prog/IT_ELECTIVE_2_Assignment_One_Billena_Dominic"
@@ -80,10 +80,21 @@ namespace IT_ELECTIVE_2_MIDTERM_PORTFOLIO_Billena_Dominic.Controllers
                 Id = 7,
                 Title = "IT Elective Pre-Finals Project",
                 Category = "Pre-Finals",
-                Description = "A group ASP.NET Core MVC project using EF Core and SQLite for application workflows and database management.",
-                Technologies = "ASP.NET Core MVC, C#, EF Core, SQLite",
+                Description = "A group ASP.NET Core MVC project created for IT Elective 2 Pre-Finals. The project focuses on collaborative development, individual commits, pull requests, and application implementation.",
+                Technologies = "ASP.NET Core MVC, C#, EF Core, SQLite, GitHub",
                 ImageUrl = "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
                 GithubUrl = "https://github.com/dominicbillena06-prog/IT_ELECTIVE_PREFINALS_PROJECT_Billena_Pantaleon_Mendoza"
+            },
+
+            new Project
+            {
+                Id = 8,
+                Title = "Pre-Finals Quiz",
+                Category = "Pre-Finals Quiz",
+                Description = "A Pre-Finals quiz project created as part of the IT Elective coursework. This project is included in the portfolio as one of the completed academic projects.",
+                Technologies = "C#, ASP.NET Core, Visual Studio, GitHub",
+                ImageUrl = "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+                GithubUrl = "https://github.com/dominicbillena06-prog/Billena_PREFINALS---QUIZ"
             }
         };
 

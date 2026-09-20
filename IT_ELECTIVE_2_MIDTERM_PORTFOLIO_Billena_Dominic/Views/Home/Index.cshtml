@@ -23,16 +23,33 @@
 
         <div class="hero-buttons">
 
-            <a asp-controller="Projects"
-               asp-action="Index"
-               class="btn btn-primary btn-lg">
-                Explore Projects
-            </a>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <a asp-controller="Projects"
+                   asp-action="Index"
+                   class="btn btn-primary btn-lg">
+
+                    Explore Projects
+
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Account"
+                   asp-action="Login"
+                   class="btn btn-primary btn-lg">
+
+                    Login to View Projects
+
+                </a>
+            }
 
             <a href="https://github.com/dominicbillena06-prog"
                target="_blank"
                class="btn btn-outline-light btn-lg">
+
                 GitHub Profile
+
             </a>
 
         </div>

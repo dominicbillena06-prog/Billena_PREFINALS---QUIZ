@@ -39,7 +39,10 @@
             <button class="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar">
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
 
                 <span class="navbar-toggler-icon"></span>
 
@@ -48,7 +51,7 @@
             <div class="collapse navbar-collapse"
                  id="mainNavbar">
 
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
 
                     <li class="nav-item">
 
@@ -76,7 +79,7 @@
 
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item ms-lg-3">
 
                             <form asp-controller="Account"
                                   asp-action="Logout"
@@ -85,7 +88,7 @@
                                 @Html.AntiForgeryToken()
 
                                 <button type="submit"
-                                        class="nav-link logout-button">
+                                        class="nav-login-button logout-button">
 
                                     Logout
 
@@ -97,11 +100,11 @@
                     }
                     else
                     {
-                        <li class="nav-item">
+                        <li class="nav-item ms-lg-3">
 
-                            <a class="nav-link"
-                               asp-controller="Account"
-                               asp-action="Login">
+                            <a asp-controller="Account"
+                               asp-action="Login"
+                               class="nav-login-button">
 
                                 Login
 
