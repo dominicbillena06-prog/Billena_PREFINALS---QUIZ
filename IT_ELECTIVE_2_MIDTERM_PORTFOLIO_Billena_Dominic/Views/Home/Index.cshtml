@@ -1,8 +1,69 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="hero-section">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            ASP.NET CORE MVC PORTFOLIO
+        </span>
+
+        <h1>
+            Dominic<br />
+            <span>Billena</span>
+        </h1>
+
+        <p>
+            IT student and aspiring software developer
+            building applications with C#, ASP.NET Core MVC,
+            databases, and networking technologies.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a asp-controller="Projects"
+               asp-action="Index"
+               class="btn btn-primary btn-lg">
+                Explore Projects
+            </a>
+
+            <a href="https://github.com/dominicbillena06-prog"
+               target="_blank"
+               class="btn btn-outline-light btn-lg">
+                GitHub Profile
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>ABOUT</span>
+
+            <h2>
+                Building. Learning. Improving.
+            </h2>
+
+        </div>
+
+        <p class="about-text">
+            I am Dominic Billena, an Information Technology
+            student focused on programming, web development,
+            and networking.
+
+            This portfolio contains selected academic projects
+            created throughout my IT Elective coursework.
+        </p>
+
+    </div>
+
+</section>

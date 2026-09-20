@@ -1,5 +1,216 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IT_ELECTIVE_2_MIDTERM_PORTFOLIO_Billena_Dominic.Models.Project
+
 @{
+    ViewData["Title"] = Model.Title;
 }
+
+<div class="container details-container">
+
+    <a asp-action="Index"
+       class="back-link">
+        ← Back to Projects
+    </a>
+
+    <div class="detail-hero">
+
+        <img src="@Model.ImageUrl"
+             alt="@Model.Title" />
+
+        <div class="detail-overlay">
+
+            <span>
+                @Model.Category
+            </span>
+
+            <h1>
+                @Model.Title
+            </h1>
+
+        </div>
+
+    </div>
+
+    <div class="detail-grid">
+
+        <main>
+
+            <section class="detail-section">
+
+                <span class="section-label">
+                    PROJECT OVERVIEW
+                </span>
+
+                <h2>
+                    About this project
+                </h2>
+
+                <p>
+                    @Model.Description
+                </p>
+
+            </section>
+
+            <section class="detail-section">
+
+                <span class="section-label">
+                    TECHNOLOGIES
+                </span>
+
+                <h2>
+                    Built With
+                </h2>
+
+                <p class="technology-box">
+                    @Model.Technologies
+                </p>
+
+            </section>
+
+            <section class="detail-section">
+
+                <span class="section-label">
+                    SOURCE CODE
+                </span>
+
+                <h2>
+                    GitHub Repository
+                </h2>
+
+                <a href="@Model.GithubUrl"
+                   target="_blank"
+                   class="btn btn-primary">
+                    View on GitHub ↗
+                </a>
+
+            </section>
+
+            <section class="comments-section">
+
+                <span class="section-label">
+                    DISCUSSION
+                </span>
+
+                <h2>
+                    Comments
+                </h2>
+
+                @if (ViewBag.Comments.Count == 0)
+                {
+                    <p class="empty-comments">
+                        No comments yet.
+                        Be the first to leave one.
+                    </p>
+                }
+                else
+                {
+                    foreach (var comment in ViewBag.Comments)
+                    {
+                        <div class="comment">
+
+                            <div class="comment-top">
+
+                                <strong>
+                                    @comment.Name
+                                </strong>
+
+                                <small>
+                                    @comment.CreatedAt.ToString("MMM dd, yyyy")
+                                </small>
+
+                            </div>
+
+                            <p>
+                                @comment.Message
+                            </p>
+
+                        </div>
+                    }
+                }
+
+                <form asp-action="AddComment"
+                      method="post"
+                      class="comment-form">
+
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden"
+                           name="projectId"
+                           value="@Model.Id" />
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Your Name
+                        </label>
+
+                        <input name="name"
+                               class="form-control"
+                               placeholder="Enter your name"
+                               required />
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Comment
+                        </label>
+
+                        <textarea name="message"
+                                  class="form-control"
+                                  rows="4"
+                                  placeholder="Write a comment..."
+                                  required></textarea>
+
+                    </div>
+
+                    <button type="submit"
+                            class="btn btn-primary">
+                        Post Comment
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <aside class="detail-sidebar">
+
+            <div class="sidebar-card">
+
+                <span>PROJECT</span>
+
+                <strong>
+                    @Model.Category
+                </strong>
+
+            </div>
+
+            <div class="sidebar-card">
+
+                <span>TECHNOLOGY</span>
+
+                <strong>
+                    @Model.Technologies
+                </strong>
+
+            </div>
+
+            <a href="@Model.GithubUrl"
+               target="_blank"
+               class="github-card">
+
+                <span>GITHUB</span>
+
+                <strong>
+                    Open Repository ↗
+                </strong>
+
+            </a>
+
+        </aside>
+
+    </div>
+
+</div>
