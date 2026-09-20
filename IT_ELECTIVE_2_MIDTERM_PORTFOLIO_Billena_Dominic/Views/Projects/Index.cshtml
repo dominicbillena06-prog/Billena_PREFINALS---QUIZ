@@ -1,0 +1,106 @@
+﻿@model List<IT_ELECTIVE_2_MIDTERM_PORTFOLIO_Billena_Dominic.Models.Project>
+
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<div class="container portfolio-container">
+
+    <div class="page-heading">
+
+        <span>MY WORK</span>
+
+        <h1>Projects</h1>
+
+        <p>
+            A collection of projects created throughout
+            my Information Technology coursework.
+        </p>
+
+    </div>
+
+    <div class="toc-card">
+
+        <div class="toc-header">
+
+            <span>01</span>
+
+            <h2>Table of Contents</h2>
+
+        </div>
+
+        <div class="toc-list">
+
+            @foreach (var project in Model)
+            {
+                <a asp-action="Details"
+                   asp-route-id="@project.Id">
+
+                    <span>
+                        @project.Id.ToString("00")
+                    </span>
+
+                    <strong>
+                        @project.Title
+                    </strong>
+
+                    <small>
+                        @project.Category
+                    </small>
+
+                </a>
+            }
+
+        </div>
+
+    </div>
+
+    <div class="projects-grid">
+
+        @foreach (var project in Model)
+        {
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img src="@project.ImageUrl"
+                         alt="@project.Title" />
+
+                    <span class="project-number">
+                        @project.Id.ToString("00")
+                    </span>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-category">
+                        @project.Category
+                    </span>
+
+                    <h2>
+                        @project.Title
+                    </h2>
+
+                    <p>
+                        @project.Description
+                    </p>
+
+                    <div class="project-tech">
+                        @project.Technologies
+                    </div>
+
+                    <a asp-action="Details"
+                       asp-route-id="@project.Id"
+                       class="project-link">
+                        View Project →
+                    </a>
+
+                </div>
+
+            </article>
+        }
+
+    </div>
+
+</div>
